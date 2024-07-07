@@ -122,6 +122,8 @@
 #wcart:focus {
   color: teal;
   background-color: white;
+  scale: 1.5;
+  transition: all 1s;
 }
 
 @media all and (max-width: 650px) {

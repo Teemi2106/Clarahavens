@@ -10,7 +10,10 @@
   background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
 }
+
 .hero h1 {
   font-size: 6vmin;
   font-weight: 700;

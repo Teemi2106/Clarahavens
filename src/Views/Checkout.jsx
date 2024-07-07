@@ -1,9 +1,15 @@
 import React from "react";
 import Header from "../Components/Header";
-import { Input } from "@chakra-ui/react";
+import { Button, Input } from "@chakra-ui/react";
 import "../CSS/checkout.css";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
+  const image = "../images/pay.png";
+  const navigate = useNavigate();
+  const submit = () => {
+    navigate("/");
+  };
   return (
     <div id="checkout">
       <Header />
@@ -35,7 +41,8 @@ const Checkout = () => {
         </form>
         <div id="pay">
           <h2>Payment Method</h2>
-          <img src="../images/pay.png" alt="" />
+          <img src={image} alt="" />
+          <Button onClick={submit}>Checkout</Button>
         </div>
       </main>
     </div>

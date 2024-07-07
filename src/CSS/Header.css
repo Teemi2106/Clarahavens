@@ -65,6 +65,9 @@
   #mm {
     display: none;
   }
+  #search {
+    display: none;
+  }
 }
 #offcanvas {
   background-color: rgb(233, 188, 151);

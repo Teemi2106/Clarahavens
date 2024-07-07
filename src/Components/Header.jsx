@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Button } from "@chakra-ui/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Header = () => {
@@ -23,6 +22,12 @@ const Header = () => {
   const handleCartClick = () => {
     navigate("/cart");
   };
+  const handleCheckoutClick = () => {
+    navigate("/checkout");
+  };
+  const handleProfileClick = () => {
+    alert("Coming Soon...");
+  };
 
   const [show, setShow] = useState(false);
 
@@ -37,7 +42,9 @@ const Header = () => {
         <li onClick={handleNewClick}>New Arrival</li>
       </ul>
       <h2 className="logo">CLARAHAVENS</h2>
-      <SearchComp handleCartClick={handleCartClick} />
+      <div id="search">
+        <SearchComp handleCartClick={handleCartClick} />
+      </div>
       <div className="media">
         <IoIosMenu onClick={handleShow} size="10vmin" />
 
@@ -55,6 +62,15 @@ const Header = () => {
               </li>
               <li onClick={handleNewClick} style={{ cursor: "pointer" }}>
                 New Arrival
+              </li>
+              <li onClick={handleCartClick} style={{ cursor: "pointer" }}>
+                Cart
+              </li>
+              <li onClick={handleProfileClick} style={{ cursor: "pointer" }}>
+                Profile
+              </li>
+              <li onClick={handleCheckoutClick} style={{ cursor: "pointer" }}>
+                Checkout
               </li>
             </ul>
           </Offcanvas.Body>
