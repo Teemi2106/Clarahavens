@@ -23,31 +23,31 @@ const NewArrival = ({ addToCart, handleCartClick }) => {
   };
 
   return (
-    <div className="men">
+    <div id="men">
       <header>
         <h1 style={{ color: "white" }}>New Arrival</h1>
         <SearchComp handleCartClick={handleCartClick} />
       </header>
-      <section className="row1">
+      <section id="row1">
         {data.map((item, index) => (
           <div
-            className="card"
+            id="card"
             key={index}
             style={{ margin: "20px", textAlign: "center" }}
           >
             <img
               src={images[item.filename]}
               alt={item.name}
-              className="menrow1"
+              id="menrow1"
               style={{
                 backgroundColor: "white",
                 objectPosition: "center",
                 objectFit: "scale-down",
               }}
             />
-            <div className="actions">
-              <BsCart4 className="cart" onClick={() => addToCart(item)} />
-              <FaHeart className="like" onClick={like} />
+            <div id="actions">
+              <BsCart4 id="cart" onClick={() => addToCart(item)} />
+              <FaHeart id="like" onClick={like} />
             </div>
             <h3 style={{ textAlign: "left" }}>{item.name}</h3>
             <p style={{ textAlign: "left" }}> {item.price}</p>

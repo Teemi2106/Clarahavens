@@ -29,36 +29,30 @@ const WomenView = ({ addToCart, handleCartClick }) => {
   };
 
   return (
-    <div className="women">
+    <div id="women">
       <header>
         <h1>Women's Collection</h1>
-        <div className="searchcmp">
+        <div id="wsearchcmp">
           {" "}
-          <form className="headerForm">
-            <CiSearch color="white" size="4vmin" />
+          <form id="wheaderForm">
             <Input backgroundColor="white" type="text" />
           </form>
-          <div className="headuser">
+          <div id="wheaduser">
             <BsCart4 cursor="pointer" size="5vmin" onClick={handleCartClick} />
-            <FaRegCircleUser cursor="pointer" size="4vmin" />
           </div>
         </div>
       </header>
-      <section className="wrow1">
+      <section id="wrow1">
         {data.map((item, index) => (
           <div
-            className="card"
+            id="card"
             key={index}
             style={{ margin: "20px", textAlign: "center" }}
           >
-            <img
-              src={images[item.filename]}
-              alt={item.name}
-              className="womenrow1"
-            />
-            <div className="actions">
-              <BsCart4 className="wcart" onClick={() => addToCart(item)} />
-              <FaHeart className="wlike" onClick={like} />
+            <img src={images[item.filename]} alt={item.name} id="womenrow1" />
+            <div id="actions">
+              <BsCart4 id="wcart" onClick={() => addToCart(item)} />
+              <FaHeart id="wlike" onClick={like} />
             </div>
             <h3 style={{ textAlign: "left" }}>{item.name}</h3>
             <p style={{ textAlign: "left" }}>${item.price}</p>
@@ -66,21 +60,17 @@ const WomenView = ({ addToCart, handleCartClick }) => {
         ))}
       </section>
       <hr />
-      <section className="wrow2">
+      <section id="wrow2">
         {data2.map((item, index) => (
           <div
-            className="card"
+            id="card"
             key={index}
             style={{ margin: "20px", textAlign: "center" }}
           >
-            <img
-              src={images2[item.filename]}
-              alt={item.name}
-              className="womenrow2"
-            />
-            <div className="actions">
-              <BsCart4 className="wcart" onClick={() => addToCart(item)} />
-              <FaHeart className="wlike" onClick={like} />
+            <img src={images2[item.filename]} alt={item.name} id="womenrow2" />
+            <div id="actions">
+              <BsCart4 id="wcart" onClick={() => addToCart(item)} />
+              <FaHeart id="wlike" onClick={like} />
             </div>
             <h3 style={{ textAlign: "left" }}>{item.name}</h3>
             <p style={{ textAlign: "left" }}>${item.price}</p>

@@ -27,26 +27,22 @@ const MensView = ({ addToCart, handleCartClick }) => {
   };
 
   return (
-    <div className="men">
+    <div id="men">
       <header>
         <h1>Men's Collection</h1>
         <SearchComp handleCartClick={handleCartClick} />
       </header>
-      <section className="row1">
+      <section id="row1">
         {data.map((item) => (
           <div
-            className="card"
-            key={item.id} // Use unique item.id as key
+            id="card"
+            key={item.id}
             style={{ margin: "20px", textAlign: "center" }}
           >
-            <img
-              src={images[item.filename]}
-              alt={item.name}
-              className="menrow1"
-            />
-            <div className="actions">
-              <BsCart4 className="cart" onClick={() => addToCart(item)} />
-              <FaHeart className="like" onClick={like} />
+            <img src={images[item.filename]} alt={item.name} id="menrow1" />
+            <div id="actions">
+              <BsCart4 id="cart" onClick={() => addToCart(item)} />
+              <FaHeart id="like" onClick={like} />
             </div>
             <h3 style={{ textAlign: "left" }}>{item.name}</h3>
             <p style={{ textAlign: "left" }}>${item.price}</p>
@@ -54,21 +50,17 @@ const MensView = ({ addToCart, handleCartClick }) => {
         ))}
       </section>
       <hr />
-      <section className="row2">
+      <section id="row2">
         {data2.map((item) => (
           <div
-            className="card"
+            id="card"
             key={item.id} // Use unique item.id as key
             style={{ margin: "20px", textAlign: "center" }}
           >
-            <img
-              src={images2[item.filename]}
-              alt={item.name}
-              className="menrow2"
-            />
-            <div className="actions">
-              <BsCart4 className="cart" onClick={() => addToCart(item)} />
-              <FaHeart className="like" onClick={like} />
+            <img src={images2[item.filename]} alt={item.name} id="menrow2" />
+            <div id="actions">
+              <BsCart4 id="cart" onClick={() => addToCart(item)} />
+              <FaHeart id="like" onClick={like} />
             </div>
             <h3 style={{ textAlign: "left" }}>{item.name}</h3>
             <p style={{ textAlign: "left" }}>${item.price}</p>

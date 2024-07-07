@@ -2,7 +2,11 @@ import React from "react";
 import "../CSS/Header.css";
 import SearchComp from "./SearchComp";
 import { useNavigate } from "react-router-dom";
-/* import OffcanvasMenu from "react-offcanvas-menu-component"; */
+import { useState } from "react";
+import { IoIosMenu } from "react-icons/io";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { Button } from "@chakra-ui/react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -20,33 +24,42 @@ const Header = () => {
     navigate("/cart");
   };
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <header className="mainHeader">
-      <ul>
+      <ul id="mm">
         <li onClick={handleMenClick}>Men</li>
         <li onClick={handleWomenClick}>Women</li>
         <li onClick={handleNewClick}>New Arrival</li>
       </ul>
       <h2 className="logo">CLARAHAVENS</h2>
       <SearchComp handleCartClick={handleCartClick} />
-      {/* <OffcanvasMenu
-        className="offcanvas"
-        config={{
-          push: true,
-        }}
-        menu={[
-          { text: "Men", link: "/" },
-          {
-            text: "Pages",
-            link: "/page",
-            submenu: [
-              { text: "Page 1", link: "/page/1" },
-              { text: "Page 2", link: "/page/2" },
-            ],
-          },
-          
-        ]}
-      /> */}
+      <div className="media">
+        <IoIosMenu onClick={handleShow} size="10vmin" />
+
+        <Offcanvas show={show} onHide={handleClose} id="offcanvas">
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Menu</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body id="offbody">
+            <ul id="offul">
+              <li onClick={handleMenClick} style={{ cursor: "pointer" }}>
+                Men
+              </li>
+              <li onClick={handleWomenClick} style={{ cursor: "pointer" }}>
+                Women
+              </li>
+              <li onClick={handleNewClick} style={{ cursor: "pointer" }}>
+                New Arrival
+              </li>
+            </ul>
+          </Offcanvas.Body>
+        </Offcanvas>
+      </div>
     </header>
   );
 };
