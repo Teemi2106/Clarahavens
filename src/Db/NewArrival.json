@@ -1,0 +1,44 @@
+[
+  {
+    "filename": "11.png",
+    "name": "Red Jacket",
+    "price": 100,
+    "folder": "newArrival",
+    "id": 11
+  },
+  {
+    "filename": "12.png",
+    "name": "Female Denim",
+    "price": 100,
+    "folder": "newArrival",
+    "id": 12
+  },
+  {
+    "filename": "13.png",
+    "name": "Women heel",
+    "price": 300,
+    "folder": "newArrival",
+    "id": 13
+  },
+  {
+    "filename": "14.png",
+    "name": "Pink shoe",
+    "price": 140,
+    "folder": "newArrival",
+    "id": 14
+  },
+  {
+    "filename": "15.png",
+    "name": "Complete jump suit",
+    "price": 200,
+    "folder": "newArrival",
+    "id": 15
+  },
+  {
+    "filename": "16.png",
+    "name": "Brown belt",
+    "price": 100,
+    "folder": "newArrival",
+    "id": 16
+  }
+]

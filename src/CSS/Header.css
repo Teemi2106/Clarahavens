@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+.mainHeader {
+  padding: 1vmin 2vmin;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(233, 188, 151);
+}
+
+.mainHeader ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+.mainHeader li {
+  padding: 0.5vmin 1vmin;
+  font-weight: 550;
+  color: rgba(0, 0, 0, 0.671);
+  cursor: pointer;
+}
+
+.headerForm {
+  display: flex;
+  align-items: center;
+}
+.headuser {
+  min-width: 10vmin;
+  gap: 3vmin;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 4vmin;
+  color: rgb(100, 26, 26);
+}
+#input {
+  background-color: rgb(206, 159, 121);
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.searchcmp {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}

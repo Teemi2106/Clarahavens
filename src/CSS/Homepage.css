@@ -1,0 +1,49 @@
+.hero {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(206, 159, 121);
+}
+.hero h1 {
+  font-size: 6vmin;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.705);
+}
+.white {
+  color: white;
+}
+footer {
+  padding: 1vmin 2vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(29, 121, 121);
+  color: white;
+  height: 7vh;
+}
+.colorCircle {
+  height: 3vmin;
+  width: 3vmin;
+  border-radius: 50%;
+  background-color: rgb(206, 159, 121);
+}
+.each {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 2vmin;
+  gap: 1vmin;
+}
+.heroBtn {
+  display: flex;
+  gap: 1vmin;
+  align-items: center;
+  background-color: rgba(34, 187, 187, 0.418);
+  padding: 1.5vmin 3vmin;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
