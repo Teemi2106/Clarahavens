@@ -2,6 +2,7 @@ import React from "react";
 import "../CSS/cart.css";
 import { Button } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import Header from "../Components/Header";
 
 const Cart = ({ cart }) => {
   const cartTotal = () => {
@@ -25,6 +26,7 @@ const Cart = ({ cart }) => {
 
   return (
     <div className="cartdiv">
+      <Header />
       <h2>Cart</h2>
       <ul className="cartul">
         {cart.map((item) => (
