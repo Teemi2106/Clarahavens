@@ -5,7 +5,11 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background: url(../images/home.png);
   background-color: rgb(206, 159, 121);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
 }
 .hero h1 {
   font-size: 6vmin;

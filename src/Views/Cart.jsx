@@ -1,23 +1,26 @@
 import React from "react";
 import "../CSS/cart.css";
 import { Button } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const Cart = ({ cart }) => {
   const cartTotal = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
   const shipping = () => {
-    const shipFee = (parseInt(cartTotal()) * 10) / 100; // Calculate shipping fee as 10% of cart total
-    return shipFee.toFixed(2); // Return shipping fee rounded to 2 decimal places
+    const shipFee = (parseInt(cartTotal()) * 10) / 100;
+    return shipFee.toFixed(2);
   };
 
   const tax = () => {
-    const taxFee = (cartTotal() + parseFloat(shipping())) * 0.1; // Calculate tax as 10% of subtotal + shipping
-    return taxFee.toFixed(2); // Return tax fee rounded to 2 decimal places
+    const taxFee = (cartTotal() + parseFloat(shipping())) * 0.1;
+    return taxFee.toFixed(2);
   };
 
+  const navigate = useNavigate();
+
   const submit = () => {
-    alert("Checkrd Out");
+    navigate("/checkout");
   };
 
   return (

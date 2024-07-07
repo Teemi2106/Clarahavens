@@ -6,6 +6,7 @@ import WomenView from "./Views/WomenView";
 import NewArrival from "./Views/NewArrival";
 import { useState, useEffect } from "react";
 import Cart from "./Views/Cart";
+import Checkout from "./Views/Checkout";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -72,6 +73,7 @@ function App() {
           }
         />
         <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </div>
   );

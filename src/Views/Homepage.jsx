@@ -8,7 +8,7 @@ const Homepage = () => {
   return (
     <div>
       <Header />
-      <main>
+      <main id="homeMain">
         <section className="hero">
           <Center w="60%" h="50vh">
             <h1>
