@@ -3,6 +3,7 @@ import "../CSS/cart.css";
 import { Button } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import Header from "../Components/Header";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 const Cart = ({ cart }) => {
   const cartTotal = () => {
@@ -24,9 +25,14 @@ const Cart = ({ cart }) => {
     navigate("/checkout");
   };
 
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="cartdiv">
       <Header />
+      <IoMdArrowRoundBack onClick={goBack} size="5vmin" />
       <h2>Cart</h2>
       <ul className="cartul">
         {cart.map((item) => (

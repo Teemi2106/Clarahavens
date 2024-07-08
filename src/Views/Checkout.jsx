@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import { Button, Input } from "@chakra-ui/react";
 import "../CSS/checkout.css";
 import { useNavigate } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 const Checkout = () => {
   const image = "../images/pay.png";
@@ -10,10 +11,15 @@ const Checkout = () => {
   const submit = () => {
     navigate("/");
   };
+
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
     <div id="checkout">
       <Header />
       <main>
+        <IoMdArrowRoundBack onClick={goBack} size="5vmin" />
         <h1>Check Out</h1>
         <form id="checkForm">
           <div>

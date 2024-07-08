@@ -5,6 +5,8 @@ import { BsCart4 } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
 import data from "../Db/MensImage1.json";
 import data2 from "../Db/MensImage2.json";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const MensView = ({ addToCart, handleCartClick }) => {
   const importAll = (r) => {
@@ -26,9 +28,15 @@ const MensView = ({ addToCart, handleCartClick }) => {
     event.currentTarget.classList.toggle("liked");
   };
 
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div id="men">
       <header>
+        <IoMdArrowRoundBack onClick={goBack} size="5vmin" />
         <h1>Men's Collection</h1>
         <SearchComp handleCartClick={handleCartClick} />
       </header>

@@ -4,9 +4,9 @@ import { BsCart4 } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
 import data from "../Db/WomenImage1.json";
 import data2 from "../Db/WomensImage2.json";
-import { CiSearch } from "react-icons/ci";
 import { Input } from "@chakra-ui/react";
-import { FaRegCircleUser } from "react-icons/fa6";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const WomenView = ({ addToCart, handleCartClick }) => {
   const importAll = (r) => {
@@ -27,10 +27,15 @@ const WomenView = ({ addToCart, handleCartClick }) => {
   const like = (event) => {
     event.currentTarget.classList.toggle("liked");
   };
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
 
   return (
     <div id="women">
       <header>
+        <IoMdArrowRoundBack onClick={goBack} size="5vmin" />
         <h1>Women's Collection</h1>
         <div id="wsearchcmp">
           {" "}
